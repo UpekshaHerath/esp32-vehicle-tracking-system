@@ -156,7 +156,7 @@ const Map = () => {
           />
         </div>
         <div>
-          <label className="text-white">End Time: </label>
+          <label className="text-white">End Time : </label>
           <DatePicker
             selected={endTime}
             onChange={(date) => setEndTime(date)}
