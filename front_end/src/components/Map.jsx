@@ -170,7 +170,7 @@ const Map = () => {
       <div className="flex-1 relative">
         <GoogleMap
           mapContainerStyle={mapContainerStyle}
-          zoom={12}
+          zoom={17}
           center={vehiclePosition}
         >
           {vehicleIcon.scaledSize && (
