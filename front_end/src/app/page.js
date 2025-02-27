@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-
 import Map from "@/components/Map";
 
 const TextField = ({ text }) => {
@@ -31,7 +30,11 @@ export default function Home() {
               vehicle speed, and provide real-time location tracking using GPS.
               "
             />
-            <TextField text={"Temperature: 34 C"} />
+            <TextField
+              text={
+                "Enhances vehicle and driver safety by detecting suspicious activities, monitoring accidents, and preventing unauthorized vehicle usage."
+              }
+            />
           </div>
         </div>
         <div className="flex md:w-2/3 w-full md:m-4 m-0">

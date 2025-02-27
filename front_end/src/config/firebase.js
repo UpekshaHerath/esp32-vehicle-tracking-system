@@ -2,13 +2,13 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAMDvc4_HoST6V54PDuCPpwNlpdzVi2EGU",
-  authDomain: "vehicle-tracking-system-e465c.firebaseapp.com",
-  projectId: "vehicle-tracking-system-e465c",
-  storageBucket: "vehicle-tracking-system-e465c.firebasestorage.app",
-  messagingSenderId: "441849404318",
-  appId: "1:441849404318:web:29ce587eff5f43de28948f",
-  measurementId: "G-J8QPYJ6T6D"
+  apiKey:process.env.NEXT_PUBLIC_FIREBASE_APIKEY,
+  authDomain:process.env.NEXT_PUBLIC_AUTHDOMAIN,
+  projectId: process.env.NEXT_PUBLIC_PROJECTID,
+  storageBucket: process.env.NEXT_PUBLIC_STORAGEBUCKET,
+  messagingSenderId: process.env.MESSAGINGSENDERID,
+  appId: process.env.NEXT_PUBLIC_APIID,
+  measurementId: process.env.NEXT_PUBLIC_MEASUREMENTID
 };
 
 const app = initializeApp(firebaseConfig);
