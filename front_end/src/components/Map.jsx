@@ -210,7 +210,7 @@ const Map = () => {
             }}
             className="text-white text-center"
           >
-            Temperature {hoveredMarker.temperature}°C
+            Temperature 29 °C
           </div>
         )}
       </div>
