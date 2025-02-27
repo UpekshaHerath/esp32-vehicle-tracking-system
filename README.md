@@ -14,6 +14,10 @@ This project aims to develop a specialized monitoring device to ensure the safe 
 * Driver Behavior Monitoring: Detects unnecessary activities or unauthorized vehicle usage.
 * LCD Display: Shows real-time status updates.
 
+### Highlevel Architecture
+![image](https://github.com/user-attachments/assets/29046d46-de95-4116-9784-b141a5ea71e9)
+
+
 ### Components Used
 * GPS - Neo 6m Module
 * Temperature - DS18B20 Sensor
