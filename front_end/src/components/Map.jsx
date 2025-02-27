@@ -144,7 +144,7 @@ const Map = () => {
 
   return (
     <div className="flex flex-col w-full h-[calc(100vh-164px)] rounded-lg">
-      <div className="flex gap-4 p-4 bg-black">
+      <div className="flex flex-col md:flex-row md:items-center md:justify-center gap-4 p-4 bg-black">
         <div>
           <label className="text-white">Start Time: </label>
           <DatePicker
