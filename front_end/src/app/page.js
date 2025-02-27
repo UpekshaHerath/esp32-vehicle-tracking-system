@@ -15,7 +15,7 @@ export default function Home() {
     <div className="flex flex-col text-white">
       <div className="flex flex-col justify-center items-center shadow-md shadow-slate-400 p-6">
         <div className="flex flex-row gap-4">
-          <Image src="/logo.png" alt="Vehicle Icon" width={40} height={30} />
+          <Image src="/logo.png" alt="Vehicle Icon" width={40} height={30} className="w-auto h-auto" />
           <h1 className="text-2xl">Vehicle Tracking System</h1>
         </div>
         <p className="flex items-center justify-center text-sm">{`Track your Vehicle's Location...`}</p>
