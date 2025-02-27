@@ -41,6 +41,12 @@ const Map = () => {
     scaledSize: null,
   });
 
+  const [blueDotIcon, setBlueDotIcon] = useState({
+    url: "/blueDot.png",
+    scaledSize: null,
+    anchor: new window.google.maps.Point(5, 5),
+  });
+
   const [data, setData] = useState([]);
   const [vehiclePosition, setVehiclePosition] = useState(center);
   const [pathCoordinates, setPathCoordinates] = useState([]);
@@ -48,7 +54,6 @@ const Map = () => {
   const [startTime, setStartTime] = useState(new Date());
   const [endTime, setEndTime] = useState(new Date());
 
-  // State to track the hovered marker
   const [hoveredMarker, setHoveredMarker] = useState(null);
 
   useEffect(() => {
@@ -56,6 +61,11 @@ const Map = () => {
       setVehicleIcon((prevIcon) => ({
         ...prevIcon,
         scaledSize: new window.google.maps.Size(40, 40),
+      }));
+
+      setBlueDotIcon((prevIcon) => ({
+        ...prevIcon,
+        scaledSize: new window.google.maps.Size(10, 10),
       }));
 
       const vehicleId = "3MlPDEStfBZvXo6g6gFN";
@@ -110,6 +120,23 @@ const Map = () => {
   if (loadError) return <ErrorLoadingSpinner />;
   if (!isLoaded) return <LoadingSpinner />;
 
+  const polylineOptions = {
+    strokeColor: "#FF0000",
+    strokeOpacity: 1.0,
+    strokeWeight: 2,
+    icons: [
+      {
+        icon: {
+          path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+          scale: 2,
+          strokeColor: "#FF0000",
+        },
+        offset: "100%",
+        repeat: "100px",
+      },
+    ],
+  };
+
   return (
     <div className="flex flex-col w-full h-[calc(100vh-164px)] rounded-lg">
       <div className="flex gap-4 p-4 bg-black">
@@ -152,24 +179,17 @@ const Map = () => {
                 lat: item.coordinate.latitude,
                 lng: item.coordinate.longitude,
               }}
+              icon={blueDotIcon}
               onMouseOver={() => setHoveredMarker(item)}
               onMouseOut={() => setHoveredMarker(null)}
             />
           ))}
 
           {pathCoordinates.length > 1 && (
-            <Polyline
-              path={pathCoordinates}
-              options={{
-                strokeColor: "#FF0000", // Red color
-                strokeOpacity: 1.0,
-                strokeWeight: 2,
-              }}
-            />
+            <Polyline path={pathCoordinates} options={polylineOptions} />
           )}
         </GoogleMap>
 
-        {/* Tooltip to display temperature on hover */}
         {hoveredMarker && (
           <div
             style={{
@@ -181,7 +201,7 @@ const Map = () => {
               border: "1px solid #ccc",
               borderRadius: "7px",
               zIndex: 1000,
-              pointerEvents: "none", // Ensure the tooltip doesn't interfere with map interactions
+              pointerEvents: "none",
             }}
             className="text-white text-center"
           >
