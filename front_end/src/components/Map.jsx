@@ -44,7 +44,7 @@ const Map = () => {
   const [blueDotIcon, setBlueDotIcon] = useState({
     url: "/blueDot.png",
     scaledSize: null,
-    anchor: new window.google.maps.Point(5, 5),
+    anchor: null,
   });
 
   const [data, setData] = useState([]);
@@ -66,6 +66,7 @@ const Map = () => {
       setBlueDotIcon((prevIcon) => ({
         ...prevIcon,
         scaledSize: new window.google.maps.Size(10, 10),
+        anchor: new window.google.maps.Point(5, 5),
       }));
 
       const vehicleId = "3MlPDEStfBZvXo6g6gFN";
