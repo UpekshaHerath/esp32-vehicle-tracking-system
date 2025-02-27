@@ -52,8 +52,8 @@ const Map = () => {
   const [pathCoordinates, setPathCoordinates] = useState([]);
 
   const [startTime, setStartTime] = useState(() => {
-    const date = new Date(); 
-    date.setDate(date.getDate() - 2); 
+    const date = new Date();
+    date.setDate(date.getDate() - 2);
     return date;
   });
   const [endTime, setEndTime] = useState(new Date());
