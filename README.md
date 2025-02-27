@@ -34,3 +34,14 @@ This project aims to develop a specialized monitoring device to ensure the safe 
 ### Circuit Diagram
 ![image](https://github.com/user-attachments/assets/de588d79-5c47-4aed-9c77-cbb1acedce8e)
 
+## UI imaages
+![image](https://github.com/user-attachments/assets/ab9d9b58-ff15-4c92-aef5-8e64ff0491b1)
+![image](https://github.com/user-attachments/assets/8a08a1f9-d9de-4eb3-9947-2d27c921582f)
+![image](https://github.com/user-attachments/assets/0fcea139-868f-4329-b7bc-4669b6a06599)
+![image](https://github.com/user-attachments/assets/105edb95-b5c2-43e8-be36-757a6aa37c5d)
+
+
+
+
+
+
